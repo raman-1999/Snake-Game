@@ -12,31 +12,31 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    overflow: hidden;
 }
 .data{
     position: absolute;
-    width: 50vmin;
+    width: 60vmin;
     height: 20vmin;
-    top: 4rem;
-    right: 10rem;
+    top: 2rem;
+    right: 6rem;
     font-size: larger;
     transition: all 0.5s linear;
     font-family: 'Dancing Script', cursive;
 }
 #instruction{
-    margin-top: 1.5rem;
-    font-size: 1.5rem;
+    margin-top: 1rem;
     font-family: 'Dancing Script', cursive;
     font-weight: 700;
 }
 #scoreArea{
-    font-size: 3rem;
+    font-size: 2rem;
     color: rgb(0, 0, 0);
     font-weight: 700;
     font-family: 'Permanent Marker', cursive;
 }
 #hgScore{
-    font-size: 3rem;
+    font-size: 2rem;
     color: rgb(0, 0, 0);
     font-weight: 700;
     font-family: 'Permanent Marker', cursive;
@@ -70,35 +70,44 @@
     border: 1px solid red;
 }
 
-@media(max-width : 1800px){
-    .data{
-        top: 2rem;
-    }
+@media(max-width : 1250px){
     #board{
         top: 2rem;
         left: 2%;
+    }
+    .data{
+       margin-top: 0;
+       right: 0;
+       width: 63vmin;
+       height: 10vmin;
+   }
+}
+@media(max-width : 1020px){
+     .data{
+         margin-top: 0;
+        left: 4%;
+        width: 63vmin;
+        height: 10vmin;
+        font-size: small;
+    }
+    #scoreArea{
+        font-size: small;
+    }
+    #hgScore{
+        font-size: small;
+    }
+    #board{
+        top: 10rem;
+        width: 90vmin;
+        height: 70vmin;
+    }
+}
+@media(max-width : 850px){
+    #board{
         width: 80vmin;
     }
 }
-@media(max-width : 1450px){
-    .data{
-        left: 2%;
-        width: 63vmin;
-        height: 10vmin;
-    }
-    #board{
-        top: 16rem;
-        left: 2%;
-        height: 70vmin;
-    }
-    #scoreArea{
-        font-size: 1.5rem;
-    }
-    #hgScore{
-        font-size: 1.5rem;
-    }
-}
-@media(max-width : 1100px){
+@media(max-width : 750px){
     #board{
         width: 70vmin;
     }
